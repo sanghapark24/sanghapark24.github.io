@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sangha Park</title>
+  <meta name="description" content="Personal site and portfolio." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23f3efe6'/><path d='M70 22 C40 10 18 30 40 48 S70 70 52 84 S22 82 24 74' fill='none' stroke='%232340c4' stroke-width='12' stroke-linecap='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo hand" href="#top" id="logo"></a>
+    <nav class="mono">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-meta mono">
+        <span id="location"></span>
+        <span id="status"></span>
+        <span id="year"></span>
+      </div>
+
+      <div class="hero-stage">
+        <figure class="hero-photo duotone" id="hero-photo"></figure>
+        <h1 class="hero-type hand">
+          <span class="line line-first" id="name-first"></span>
+          <span class="line line-mid"><span class="rule"></span><span class="role-word" id="role-word"></span><span class="rule"></span></span>
+          <span class="line line-last" id="name-last"></span>
+        </h1>
+      </div>
+
+      <p class="tagline" id="tagline"></p>
+      <ul class="socials mono" id="socials"></ul>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <h2 class="hand">Selected work</h2>
+        <div class="filters mono" id="filters" role="group" aria-label="Filter projects"></div>
+      </div>
+      <div class="grid" id="projects"></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div>
+        <h2 class="hand">About</h2>
+        <p class="note hand" id="note"></p>
+      </div>
+      <div class="about-body" id="about-body"></div>
+    </section>
+
+    <section class="section about resume" id="resume">
+      <h2 class="hand">Resume</h2>
+      <div class="about-body">
+        <p id="resume-text"></p>
+        <a class="resume-link mono scribble" id="resume-link" href="#" target="_blank" rel="noopener">View my resume (PDF) ↗</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="mono eyebrow">best way to reach me is via email.</p>
+      <a class="contact-link hand" id="contact-link" href="#">contact <span class="arrow">→</span></a>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span id="footer-text"></span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
