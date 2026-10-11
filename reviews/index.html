@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reviews · Sangha Park</title>
+  <meta name="description" content="Short reviews of restaurants I've eaten at this year." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23f3efe6'/><path d='M70 22 C40 10 18 30 40 48 S70 70 52 84 S22 82 24 74' fill='none' stroke='%232340c4' stroke-width='12' stroke-linecap='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo hand" href="../" id="logo"></a>
+    <nav class="mono">
+      <a href="../#work">Work</a>
+      <a href="../#about">About</a>
+      <a href="./" aria-current="page">Reviews</a>
+      <a href="../#contact">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero reviews-hero">
+      <div class="hero-meta mono">
+        <span>Restaurants</span>
+        <span id="count"></span>
+        <span id="year"></span>
+      </div>
+      <h1 class="hand reviews-title">Reviews</h1>
+      <p class="tagline" id="intro"></p>
+    </section>
+
+    <div class="section reviews-list" id="reviews"></div>
+  </main>
+
+  <footer class="footer mono">
+    <a href="../">← Back home</a>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="../content.js"></script>
+  <script src="reviews.js"></script>
+  <script src="page.js"></script>
+</body>
+</html>
