@@ -1,0 +1,6 @@
+# Reference images (other people's work), kept local only
+inspiration/
+
+# macOS and editor clutter
+.DS_Store
+.claude/
