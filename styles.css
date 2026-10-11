@@ -435,6 +435,76 @@ a { color: inherit; }
 .footer a { text-decoration: none; }
 .footer a:hover { color: var(--ink); }
 
+/* ---------- Reviews page ---------- */
+.nav nav a[aria-current="page"] { color: var(--red); }
+.reviews-hero { padding-bottom: clamp(20px, 4vw, 40px); }
+.reviews-title {
+  font-size: clamp(4rem, 15vw, 11rem);
+  line-height: 0.9;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+  text-align: center;
+  transform: rotate(-2deg);
+}
+.reviews-hero .tagline { margin-top: clamp(20px, 4vw, 36px); margin-bottom: 0; }
+.reviews-list { padding-top: clamp(30px, 5vw, 60px); }
+
+.reviews-list .month {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--muted);
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--rule);
+  margin: clamp(40px, 6vw, 72px) 0 clamp(36px, 5vw, 56px);
+}
+.reviews-list .month:first-child { margin-top: 0; }
+
+.review {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  margin-bottom: clamp(56px, 8vw, 96px);
+}
+.review:nth-of-type(even) .frame { order: 2; }
+.review .frame { transform: rotate(-1deg); }
+.review:nth-of-type(even) .frame { transform: rotate(1deg); }
+.review-photo { aspect-ratio: 4 / 3; container-type: inline-size; }
+/* Food looks best in real color, so review photos skip the duotone tint. */
+.duotone.full-color img { filter: none; mix-blend-mode: normal; }
+.duotone.full-color::after { display: none; }
+
+.review-body { display: flex; flex-direction: column; gap: 8px; }
+.review-body h3 {
+  font-family: var(--hand);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  color: var(--blue);
+}
+.review-body h3 a { color: inherit; }
+.stars { color: var(--red); letter-spacing: 0.12em; font-size: 1.15rem; line-height: 1; }
+.review-meta { color: var(--muted); }
+.michelin { color: var(--red); font-weight: 700; }
+.review-text { font-size: clamp(1rem, 1.6vw, 1.12rem); max-width: 48ch; }
+.order-note {
+  align-self: flex-start;
+  margin-top: 6px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: var(--red);
+  transform: rotate(-2deg);
+}
+@media (max-width: 760px) {
+  .review { grid-template-columns: 1fr; gap: 18px; }
+  .review:nth-of-type(even) .frame { order: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
